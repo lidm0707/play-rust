@@ -25,6 +25,22 @@ fn create_arr() -> Vec<&'static str> {
     return vec; // คืนค่าอาร์เรย์ arr
 }
 
+fn pythagoras(a: f64, b: f64, c: f64) -> f64 {
+    if a == 0.0 {
+        // Solve for a (the hypotenuse)
+        return (b.powi(2) + c.powi(2)).sqrt();
+    } else if b == 0.0 {
+        // Solve for b (one of the legs)
+        return (a.powi(2) - c.powi(2)).sqrt();
+    } else if c == 0.0 {
+        // Solve for c (the other leg)
+        return (a.powi(2) - b.powi(2)).sqrt();
+    } else {
+        panic!("At least one of the values must be 0.0 to solve for the missing side.");
+    }
+}
+
+
 struct Person {
     name: String,
     age: i32,
@@ -45,7 +61,7 @@ fn main() {
         name: "hma".to_string(),
         age: 32,
     };
-    
+
     println!("hello {name}");
     println!("{string1} {string2} {string3} {string4}");
     println!("num is {num} boo is {boo} ");
@@ -55,5 +71,8 @@ fn main() {
     let mut arr: Vec<&str> = create_arr();
     arr.push("b");
     println!("{arr:?}");
-    println!("Person {} Age {}", person.name , person.age);
+    println!("Person {} Age {}", person.name, person.age);
+    let pyta = pythagoras(0.00,1.22,3.33);
+    print!("pytagorus is {pyta}")
+
 }
