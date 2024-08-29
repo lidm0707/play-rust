@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yew App</title>
+  <link data-trunk rel="rust" />
+  <link rel="stylesheet" href="index.css">
+</head>
+<style>
+  /* Reset default margin, padding, and box-sizing */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* Ensure the main section uses Flexbox properly */
+  main {
+    display: flex;
+    flex-direction: column;
+    /* จัดกล่องตามแนวตั้ง */
+    gap: 10px;
+    justify-content: center; /* จัดแนวนอนให้กลาง */
+    align-items: center;  
+  }
+
+  /* Style for the navigation container */
+  .container-nav {
+    display: block;
+    position: sticky;
+    background-color: black;
+    top: 0;
+  }
+
+  /* Style for navigation items */
+  .nav-item {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+  }
+
+  /* Correct hover selector */
+  .nav-item:hover {
+    color: red;
+  }
+
+  /* Style for the content box */
+  .box-content {
+    font-size: 50px ;
+    font-weight: bold;
+    color:orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 5px;
+    margin: 10px;
+    height: 300px;
+    width: 800px;
+  }
+</style>
+
+</html>

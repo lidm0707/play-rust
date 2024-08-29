@@ -4,6 +4,8 @@ fn type_of<T>(_: T) -> &'static str {
     return type_name::<T>();
 }
 
+
+
 // String slice
 // char
 // usize
@@ -47,6 +49,7 @@ struct Person {
 }
 
 fn main() {
+
     let name: &str = "RustS"; // more char
     let string1: char = 'r'; // one char
     let string2: char = 'u';
