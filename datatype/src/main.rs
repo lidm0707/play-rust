@@ -1,7 +1,10 @@
+
+mod file;
 use std::any::type_name;
 
 fn type_of<T>(_: T) -> &'static str {
     return type_name::<T>();
+    
 }
 
 
@@ -49,7 +52,7 @@ struct Person {
 }
 
 fn main() {
-
+    file::file2::my_function("s".to_string());
     let name: &str = "RustS"; // more char
     let string1: char = 'r'; // one char
     let string2: char = 'u';
